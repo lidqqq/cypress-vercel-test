@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress run with env
+      - name: Cypress run with config
         uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{ github.event.deployment_status.target_url }}
