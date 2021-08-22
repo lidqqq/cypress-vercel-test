@@ -36,12 +36,6 @@ jobs:
     # successful
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
-    # Thank you cypress for providing a container
-    # that works out-of-the-box
-    container: cypress/browsers:node14.17.0-chrome91-ff89
-    env:
-      TERM: xterm
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
