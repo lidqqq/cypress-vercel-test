@@ -6,5 +6,5 @@ inputs:
   description:
     required: true
 runs:
-  using: 'node14'
+  using: 'node12'
   main: 'index.js'
