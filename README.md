@@ -25,4 +25,7 @@ yarn create next-app --example with-cypress with-cypress-app
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-# cypress-vercel-test
+
+## Ref
+
+- https://www.philgiese.com/post/e2e-with-vercel#pointing-the-test-runner-at-the-deployment
