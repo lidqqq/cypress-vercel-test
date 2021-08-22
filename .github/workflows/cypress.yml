@@ -14,7 +14,7 @@ jobs:
       # This checks out the code of this repository.
       # We need this because this is where our action
       # lives.
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Set status to "pending."
         uses: ./.github/actions/set-pr-status
@@ -38,15 +38,18 @@ jobs:
     runs-on: ubuntu-latest
     # Thank you cypress for providing a container
     # that works out-of-the-box
-    container: cypress/browsers:node11.13.0-chrome73
+    container: cypress/browsers:node14.17.0-chrome91-ff89
     env:
       TERM: xterm
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - name: Run E2E tests
-        run: npx cypress run --config baseUrl=${{ github.event.deployment_status.target_url }}
+      - name: Cypress run with env
+        uses: cypress-io/github-action@v2
+        config: baseUrl=${{ github.event.deployment_status.target_url }}
+
       - name: Set status to "success"
         # The "if" underneath makes sure that this step
         # runs solely when the step before was successful
