@@ -28,4 +28,4 @@ Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&ut
 
 ## Ref
 
-- https://www.philgiese.com/post/e2e-with-vercel#pointing-the-test-runner-at-the-deployment
+- https://www.philgiese.com/post/e2e-with-vercel
