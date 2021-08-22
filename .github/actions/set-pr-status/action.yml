@@ -1,0 +1,10 @@
+name: 'set-pr-status'
+description: 'set pr status from Githug Action'
+inputs:
+  state:
+    required: true
+  description:
+    required: true
+runs:
+  using: 'node14'
+  main: 'index.js'
