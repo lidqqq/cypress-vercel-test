@@ -44,6 +44,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{ github.event.deployment_status.target_url }}
+          env: NEED_BASIC_AUTH=true
 
       - name: Set status to "success"
         # The "if" underneath makes sure that this step

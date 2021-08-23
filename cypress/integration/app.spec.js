@@ -5,6 +5,9 @@
 
 describe('Navigation', () => {
   it('should navigate to the about page', () => {
+    if (Cypress.env('NEED_BASIC_AUTH')) {
+      cy.log('❤️❤️❤️');
+    }
     // Start from the index page
     cy.visit('/');
 
